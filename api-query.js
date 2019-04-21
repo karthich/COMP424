@@ -166,13 +166,21 @@ function handleFormSubmit(specialty, insurance, gender, zipcode) {
 	);
 };
 
-document.getElementById('my-form').addEventListener('submit', function(event) {
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
 
-const specialty = document.getElementById('select-specialty').value;
-const insurance = document.getElementById('select-insurance').value;
-const gender = document.getElementById('select-gender').value;
-const zip = document.getElementById('input-zip').value;
-handleFormSubmit(specialty, insurance, gender, zip);
+function runOnPageLoad() {
+var page_params = getUrlVars();
+const specialty = page_params['specialty'];
+const insurance = page_params['insurance'];
+const gender = page_params['gender'];
+const location = page_params['location'];
+handleFormSubmit(specialty, insurance, gender, location);
+};
 
-event.preventDefault();
-})
+runOnPageLoad();

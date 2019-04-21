@@ -5,20 +5,19 @@
 <head>
     <meta charset="utf-8">
     <title>MedFinder</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
-  <body>
-    <div class="wrapper">
-      <div class="banner">
-    <!--TOP HEADER-->
-    <div class="header">
-      <h1>MedFinder</h1>
-    </div>
+<div class="wrapper">
+    <div class="banner">
+        <!--TOP HEADER-->
+        <div class="header">
+            <h1>MedFinder</h1>
+        </div>
 
-    <div class="header2">
-      <h2> Find a physician based on specialty, insurance, gender, and location!</h2>
-    </div>
+        <div class="header2">
+            <h2> Find a physician based on specialty, insurance, gender, and location!</h2>
+        </div>
         <div class="banner-extras">
             <!--<div class="site-search">-->
             <!--<input type="search" name="search_query" placeholder="enter state code...e.g. CA">-->
@@ -26,8 +25,10 @@
             <!--</div>-->
             <div class="site-user">
                 <div class="user-login">
-                    <a href="medfinder_login.html"><input type="submit" value="login" name="user_login" class="submit-button" ></a>
-                    <a href="medfinder_signup.html"><input type="submit" value="register" name="user_register" class="submit-button"></a>
+                    <a href="medfinder_login.html"><input type="submit" value="login" name="user_login"
+                                                          class="submit-button"></a>
+                    <a href="medfinder_signup.html"><input type="submit" value="register" name="user_register"
+                                                           class="submit-button"></a>
                 </div>
             </div>
         </div>
@@ -42,58 +43,52 @@
     <!--</nav>-->
 
     <div class="site-nav" aria-labelledby="primary-navigation">
-        <form id="my-form">
-          <div class="flex-container">
-            <div class="Specialty" id="specialty">
-                <select id="select-specialty">
-                    <!--  <option value="Name">{{name}}</option>-->
-                    <option value="" selected disabled hidden>Specialty</option>
-                    <option value="internist">Internal Medicine</option>
-                    <option value="pediatrician">Pediatrics</option>
-                </select>
-            </div>
-            <div class="Insurance" id="insurance">
-                <select id="select-insurance">
-                    <option value="" selected disabled hidden>Insurance</option>
-                  <!--  <option value="amerihealth">Amerihealth</option>-->
-                    <option value="aetna-aetnahmo">Aetna HMO</option>
-                    <option value="bcbsbluecard-bcbsbluecardppo">BCBS-PPO</option>
-                    <option value="anthem-anthemppo">Anthem PPO</option>
-                    <option value="cigna-cignahmo">Cigna HMO </option>
-                </select>
-            </div>
-            <div class"gender" id="gender">
-              <select id="select-gender">
-              <option value="" selected disabled hidden>Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-              <!--<input id="input-problem" name="problem" type="text" placeholder="Enter problem">-->
-            </div>
+        <form id="my-form" action="/COMP424/results.html">
+            <div class="flex-container">
+                <div class="specialty" id="specialty">
+                    <select id="select-specialty" name="specialty">
+                        <!--  <option value="Name">{{name}}</option>-->
+                        <option value="" selected disabled hidden>Specialty</option>
+                        <option value="internist">Internal Medicine</option>
+                        <option value="pediatrician">Pediatrics</option>
+                    </select>
+                </div>
+                <div class="Insurance" id="insurance">
+                    <select id="select-insurance" name="insurance">
+                        <option value="" selected disabled hidden>Insurance</option>
+                        <!--  <option value="amerihealth">Amerihealth</option>-->
+                        <option value="aetna-aetnahmo">Aetna HMO</option>
+                        <option value="bcbsbluecard-bcbsbluecardppo">BCBS-PPO</option>
+                        <option value="anthem-anthemppo">Anthem PPO</option>
+                        <option value="cigna-cignahmo">Cigna HMO</option>
+                    </select>
+                </div>
+                <div class="gender" id="gender">
+                    <select id="select-gender" name="gender">
+                        <option value="" selected disabled hidden>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <!--<input id="input-problem" name="problem" type="text" placeholder="Enter problem">-->
+                </div>
 
-            <div class="Zip" id="zip">
-                <input id="input-zip" name="location" type="text" placeholder="Enter location as (state-city)">
+                <div class="zip" id="zip">
+                    <input id="input-zip" name="location" type="text" placeholder="Enter location as (state-city)">
+                </div>
             </div>
-          </div>
-
-            <div class="searchbutton" id="search">
-                <button>Search</button>
+            <div class="flex-container">
+                <div class="searchbutton" id="search">
+                    <button>Search</button>
+                </div>
             </div>
         </form>
 
     </div>
-    <main class="site-content">
-        <section id="page-content" class="content">
+    <div class="footer">
+        <p>Loyola University Chicago, COMP424, Spring 2019</p>
+        <p>by Swaeta Sekharan</p>
+    </div>
 
-        </section>
-    </main>
-
-</div>
-<script src="./src/api-query.js"></script>
-
-<div class="footer">
-  <p>Loyola University Chicago, COMP424, Spring 2019</p>
-  <p>by Swaeta Sekharan</p>
 </div>
 
 
